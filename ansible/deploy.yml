@@ -1,0 +1,16 @@
+---
+- name: jenkins ansible deployment
+  hosts: all
+  become: true
+
+  tasks:
+    - nmae: docker container run
+      docker_container:
+        name: web
+        image: nginx
+        tag: latest
+        tty: true
+        state: started
+        ports:
+        80:80
+       
