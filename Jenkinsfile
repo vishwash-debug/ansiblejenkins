@@ -11,7 +11,8 @@ pipeline {
       steps {
         ansibleplaybook(
           playbook: 'ansible/deploy.yml' ,
-          inventory: 'ansible/hosts.ini'
+          inventory: 'ansible/hosts.ini' ,
+          CredentialsId: '${SSH_KEY}'
         )
     
 }
