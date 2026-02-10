@@ -7,10 +7,9 @@
     - nmae: docker container run
       docker_container:
         name: web
-        image: nginx
-        tag: latest
+        image: nginx:latest
         tty: true
         state: started
         ports:
-        80:80
+         - "80:80"
        
