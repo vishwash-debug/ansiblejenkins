@@ -9,7 +9,7 @@ pipeline {
     }
     stage('ANSIBLE PLAYBOOK') {
       steps {
-        ansibleplaybook(
+        ansiblePlaybook(
           playbook: 'ansible/deploy.yml' ,
           inventory: 'ansible/host.ini' ,
           credentialsId: '${SSH_KEY}'
