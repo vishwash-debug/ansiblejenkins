@@ -14,5 +14,7 @@ pipeline {
           inventory: 'ansible/host.ini' ,
           credentialsId: '${SSH_KEY}'
         )
+
+      }   
     
 }
